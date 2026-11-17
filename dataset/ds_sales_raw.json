@@ -1,0 +1,48 @@
+{
+	"name": "ds_sales_raw",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blob_day5",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "sales_2026-03-01.csv",
+				"container": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "txn_id",
+				"type": "String"
+			},
+			{
+				"name": "store_id",
+				"type": "String"
+			},
+			{
+				"name": "sku",
+				"type": "String"
+			},
+			{
+				"name": "qty",
+				"type": "String"
+			},
+			{
+				"name": "amount",
+				"type": "String"
+			},
+			{
+				"name": "txn_date",
+				"type": "String"
+			}
+		]
+	}
+}

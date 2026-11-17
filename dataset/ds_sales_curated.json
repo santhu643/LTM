@@ -1,0 +1,23 @@
+{
+	"name": "ds_sales_curated",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blob_day5",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "sales",
+				"container": "curated"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
